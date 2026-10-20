@@ -1,0 +1,112 @@
+# Gladys Assistant look & feel for Home Assistant.
+# Based on the Tabler palette used by the Gladys Assistant UI.
+Gladys:
+  # ---- Shared (mode independent) ----
+  primary-font-family: '"Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  paper-font-common-base_-_font-family: var(--primary-font-family)
+  paper-font-body1_-_font-family: var(--primary-font-family)
+  ha-card-border-radius: 3px
+  ha-card-border-width: 1px
+  ha-card-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
+  ha-button-border-radius: 3px
+  ha-dialog-border-radius: 3px
+  switch-checked-color: var(--primary-color)
+  slider-color: var(--primary-color)
+  slider-bar-color: var(--divider-color)
+  state-icon-color: var(--secondary-text-color)
+  state-icon-active-color: var(--primary-color)
+  state-active-color: var(--primary-color)
+  state-climate-heat-color: "#fd9644"
+  state-climate-cool-color: "#45aaf2"
+  success-color: "#5eba00"
+  warning-color: "#f1c40f"
+  error-color: "#cd201f"
+  info-color: "#467fcf"
+  label-badge-red: "#cd201f"
+  label-badge-green: "#5eba00"
+  label-badge-blue: "#467fcf"
+  label-badge-yellow: "#f1c40f"
+
+  modes:
+    light:
+      primary-color: "#467fcf"
+      dark-primary-color: "#3866a6"
+      light-primary-color: "#c8d9f1"
+      accent-color: "#467fcf"
+      primary-background-color: "#f5f7fb"
+      secondary-background-color: "#ffffff"
+      lovelace-background: var(--primary-background-color)
+      primary-text-color: "#495057"
+      secondary-text-color: "#9aa0ac"
+      disabled-text-color: "#ced4da"
+      text-primary-color: "#ffffff"
+      divider-color: "rgba(0, 40, 100, 0.12)"
+      outline-color: "rgba(0, 40, 100, 0.12)"
+      card-background-color: "#ffffff"
+      ha-card-background: "#ffffff"
+      ha-card-border-color: "rgba(0, 40, 100, 0.12)"
+      app-header-background-color: "#ffffff"
+      app-header-text-color: "#495057"
+      sidebar-background-color: "#ffffff"
+      sidebar-text-color: "#495057"
+      sidebar-icon-color: "#9aa0ac"
+      sidebar-selected-background-color: "rgba(70, 127, 207, 0.1)"
+      sidebar-selected-text-color: "#467fcf"
+      sidebar-selected-icon-color: "#467fcf"
+      table-header-background-color: "#f8f9fa"
+      table-row-background-color: "#ffffff"
+      table-row-alternative-background-color: "#f8f9fa"
+      input-fill-color: "#ffffff"
+      input-ink-color: "#495057"
+      input-label-ink-color: "#9aa0ac"
+      input-idle-line-color: "rgba(0, 40, 100, 0.12)"
+      input-dropdown-icon-color: "#9aa0ac"
+      mdc-theme-primary: var(--primary-color)
+      switch-unchecked-color: "#ced4da"
+      switch-unchecked-track-color: "#e9ecef"
+      switch-checked-track-color: "#467fcf"
+      paper-slider-container-color: "#e9ecef"
+      paper-listbox-background-color: "#ffffff"
+      mdc-ripple-color: "#467fcf"
+      codemirror-property: "#467fcf"
+    dark:
+      primary-color: "#5a8fdd"
+      dark-primary-color: "#467fcf"
+      light-primary-color: "#2b4a7a"
+      accent-color: "#5a8fdd"
+      primary-background-color: "#151b26"
+      secondary-background-color: "#1c2433"
+      lovelace-background: var(--primary-background-color)
+      primary-text-color: "#e1e6ef"
+      secondary-text-color: "#8b95a7"
+      disabled-text-color: "#5c6678"
+      text-primary-color: "#ffffff"
+      divider-color: "rgba(255, 255, 255, 0.1)"
+      outline-color: "rgba(255, 255, 255, 0.1)"
+      card-background-color: "#1c2433"
+      ha-card-background: "#1c2433"
+      ha-card-border-color: "rgba(255, 255, 255, 0.08)"
+      app-header-background-color: "#1c2433"
+      app-header-text-color: "#e1e6ef"
+      sidebar-background-color: "#1c2433"
+      sidebar-text-color: "#e1e6ef"
+      sidebar-icon-color: "#8b95a7"
+      sidebar-selected-background-color: "rgba(90, 143, 221, 0.15)"
+      sidebar-selected-text-color: "#5a8fdd"
+      sidebar-selected-icon-color: "#5a8fdd"
+      table-header-background-color: "#232d3f"
+      table-row-background-color: "#1c2433"
+      table-row-alternative-background-color: "#202a3b"
+      input-fill-color: "#232d3f"
+      input-ink-color: "#e1e6ef"
+      input-label-ink-color: "#8b95a7"
+      input-idle-line-color: "rgba(255, 255, 255, 0.12)"
+      input-dropdown-icon-color: "#8b95a7"
+      mdc-theme-primary: var(--primary-color)
+      switch-unchecked-color: "#5c6678"
+      switch-unchecked-track-color: "#2c3649"
+      switch-checked-track-color: "#5a8fdd"
+      paper-slider-container-color: "#2c3649"
+      paper-listbox-background-color: "#1c2433"
+      mdc-ripple-color: "#5a8fdd"
+      codemirror-property: "#5a8fdd"

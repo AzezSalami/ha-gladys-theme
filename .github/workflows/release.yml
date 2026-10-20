@@ -1,0 +1,22 @@
+name: Release
+
+# Uses Conventional Commits on main (feat: / fix: / feat!:).
+# release-please opens a "release PR" that bumps the version and updates
+# CHANGELOG.md. Merging that PR creates the tag + GitHub release, which is
+# what HACS installs from.
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
