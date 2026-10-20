@@ -1,38 +1,22 @@
 name: Release
-
-# Every push to main publishes a new release (patch version bump).
-# Include "#minor" or "#major" in the commit message to bump those instead.
 on:
   push:
     branches: [main]
-    paths:
-      - "themes/**"
-      - "hacs.json"
-
+    paths: [VERSION, themes/**]
 permissions:
   contents: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Compute next version
-        id: version
-        run: |
-          latest=$(git tag --list 'v*' --sort=-v:refname | head -n1)
-          latest=${latest:-v0.0.0}
-          IFS=. read -r major minor patch <<< "${latest#v}"
-          msg="${{ github.event.head_commit.message }}"
-          if [[ "$msg" == *"#major"* ]]; then major=$((major+1)); minor=0; patch=0
-          elif [[ "$msg" == *"#minor"* ]]; then minor=$((minor+1)); patch=0
-          else patch=$((patch+1)); fi
-          echo "tag=v$major.$minor.$patch" >> "$GITHUB_OUTPUT"
-
-      - name: Create release
+      - name: Create a release if the version is new
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "${{ steps.version.outputs.tag }}" --target "${{ github.sha }}" --generate-notes --title "${{ steps.version.outputs.tag }}"
+        run: |
+          version=$(tr -d '[:space:]' < VERSION)
+          if gh release view "v$version" >/dev/null 2>&1; then
+            echo "v$version is already released"
+          else
+            gh release create "v$version" --title "v$version" --generate-notes --target "$GITHUB_SHA"
+          fi

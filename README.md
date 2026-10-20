@@ -18,5 +18,4 @@ For the exact font, install "Source Sans Pro" (e.g. via a custom resource); othe
 
 ## Releases
 
-Automatic: every push to `main` that changes the theme publishes a new release (patch bump).
-Add `#minor` or `#major` to the commit message for a bigger bump.
+Edit `VERSION` and push to `main`. If `v<VERSION>` doesn't exist yet, a release is created automatically.
