@@ -18,5 +18,5 @@ For the exact font, install "Source Sans Pro" (e.g. via a custom resource); othe
 
 ## Releases
 
-Fully automated: commit to `main` using [Conventional Commits](https://www.conventionalcommits.org)
-(`feat:`, `fix:`). A release PR is opened automatically; merging it tags and publishes the release.
+Automatic: every push to `main` that changes the theme publishes a new release (patch bump).
+Add `#minor` or `#major` to the commit message for a bigger bump.
