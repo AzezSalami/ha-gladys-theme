@@ -1,7 +1,7 @@
 # Gladys Theme for Home Assistant
 
 Makes Home Assistant look like the [Gladys Assistant](https://gladysassistant.com) UI
-(Tabler-style palette, flat white cards, thin borders, Source Sans Pro). Includes light and dark modes.
+(pastel gradient background, frosted-glass rounded cards, navy pills, mint-green actions).
 
 ## Install with HACS
 
@@ -14,7 +14,7 @@ Makes Home Assistant look like the [Gladys Assistant](https://gladysassistant.co
    ```
 4. Profile → **Theme** → select **Gladys** (light/dark follows your setting).
 
-For the exact font, install "Source Sans Pro" (e.g. via a custom resource); otherwise a system font is used.
+For the exact font, install "Inter" (e.g. via a custom resource); otherwise a system font is used.
 
 ## Releases
 
